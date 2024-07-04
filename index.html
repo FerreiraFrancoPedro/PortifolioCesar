@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Adicione o link para Font Awesome aqui -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - César Nogueira</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand text-white" href="#home"><img src="img/logoCésar.jpg" alt="Logo César Nogueira">César Nogueira</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Início</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="#galeria">Galeria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contato</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="container mt-5 content">
+        <!-- Sobreposição semitransparente para melhor legibilidade -->
+        <div class="overlay"></div>
+        <div class="text-center">
+            <h2>Bem-vindo ao Portfólio de César Nogueira</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="img/fotoPáginaInicial.jpg" class="img-fluid rounded" alt="Foto César Nogueira">
+            </div>
+            <div class="col-md-6" id="texto">
+                <p>Olá! Eu sou o Cesar, um personal trainer de 29 anos, natural de Machado, MG. Atualmente, atuo no Clube dos 30, onde ofereço treinamentos personalizados e exclusivos para ajudar meus clientes a alcançarem seus objetivos de saúde e bem-estar.</p>
+
+                <p>Além do meu trabalho no clube, também atendo individualmente com horários agendados, proporcionando um atendimento personalizado e focado nas necessidades específicas de cada pessoa. Acredito que cada indivíduo é único e, por isso, ofereço um serviço de mentoria exclusivo, desenhado para atender seus objetivos e metas pessoais.</p>
+                    
+                <p>Se você quer melhorar sua performance, alcançar uma meta específica de condicionamento físico ou simplesmente adotar um estilo de vida mais saudável, estou aqui para ajudar. Comigo, você terá um acompanhamento de qualidade, adaptado às suas necessidades, e com o suporte de um profissional experiente e apaixonado pelo que faz.</p>
+                    
+                <p>Vamos juntos conquistar seus objetivos!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="container mt-5 content">
+        <div class="row">
+            <div class="col text-center">
+                <h2>RESULTADOS</h2>
+                <p>Antes e depois dos alunos:</p>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <img src="img/alunos/Pedro1.JPEG" class="img-fluid rounded galeria-img" alt="Antes e Depois 1">
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <img src="img/alunos/Pedro2.JPEG" class="img-fluid rounded galeria-img" alt="Antes e Depois 2">
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <img src="img/alunos/Pedro3.JPEG" class="img-fluid rounded galeria-img" alt="Antes e Depois 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container mt-5 content overlay">
+        <div class="row">
+            <div class="col text-center">
+                <h2>Contato</h2>
+                <p>Entre em contato comigo clicando nos anuncios abaixo:</p>
+                <br>
+                <br>
+                <div class="row">
+                    <!-- WhatsApp Video -->
+                    <div class="col-md-6 mx-auto mb-4">
+                        <div class="contact-info">
+                            <a href="https://api.whatsapp.com/send?phone=5535988193102&text=Ol%C3%A1,%20gostaria%20de%20falar%20com%20o%20C%C3%A9sar%20Personal%20Trainer." target="_blank">
+                                <video autoplay loop muted playsinline width="auto" height="auto">
+                                <source src="img/Atendimento.mp4" type="video/mp4">
+                                Seu navegador não suporta vídeos HTML5.
+                            </video>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Instagram Feed (centralizado) -->
+                    <div class="col-md-6 mx-auto mb-4">
+                        <div class="instagram-feed">
+                            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/cesar_personall/" data-instgrm-version="13"></blockquote>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>    
+    
+    <footer class="footer">
+        <p>&copy; 2024 César Nogueira. Todos os direitos reservados.</p>
+        <p>
+            <a href="https://www.instagram.com/cesar_personall/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=5535988193102&text=Ol%C3%A1,%20gostaria%20de%20falar%20com%20o%20C%C3%A9sar%20Personal%20Trainer." target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="tel:+5535988193102"><i class="fas fa-phone"></i></a>
+        </p>
+    </footer>
+
+    <!-- Script do Instagram -->
+    <script async src="//www.instagram.com/embed.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

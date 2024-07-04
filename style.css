@@ -1,0 +1,133 @@
+/* Estilos gerais para o corpo da página */
+body {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background: url('img/academia1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    transition: background-image 20s ease-in-out;
+    position: relative;
+    box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para a barra de navegação */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.nav-link {
+    color: #ffffff !important;
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Estilos para o conteúdo principal */
+.content {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+/* Estilos para o rodapé */
+.footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+    margin-top: 5em;
+}
+
+.footer a {
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ff6106;
+}
+
+.contact-info a {
+    color: #ff6106;
+}
+
+/* Ajustes para a seção de home */
+#home {
+    font-size: 1.2em;
+}
+
+#home div {
+    margin: 1em auto;
+}
+
+/* Estilo para a sobreposição semitransparente */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Cor e opacidade da sobreposição */
+    z-index: 0;
+}
+
+
+/* Estilo para as imagens da galeria */
+.galeria-img {
+    width: 100%;
+    height: 30em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 2px solid #ff6106; /* Adiciona uma borda de 2px na cor #ff6106 */
+}
+
+/* Estilos para o feed do Instagram */
+.instagram-feed {
+    max-width: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* Estilo para o vídeo */
+.contact-info video {
+    width: 60%;
+    height: 20%;
+    align-items: center;
+}
+
+/* Estilo para a barra de navegação responsiva */
+@media (max-width: 768px) {
+    .navbar-brand img {
+        height: 30px;
+    }
+    .galeria-img {
+        height: auto; /* Ajuste a altura para se adaptar ao conteúdo */
+    }
+    .contact-info video {
+        height: auto; /* Ajuste a altura para se adaptar ao conteúdo */
+    }
+    .instagram-feed {
+        height: auto; /* Ajuste a altura para se adaptar ao conteúdo */
+    }
+}
+
+/* Estilos específicos para a seção de contato */
+#contact {
+    position: relative;
+    padding: 20px;
+    z-index: 1;
+}
+
+#contact .overlay {
+    display: none;
+}
