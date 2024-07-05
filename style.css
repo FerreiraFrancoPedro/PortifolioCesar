@@ -8,14 +8,29 @@ body {
     background: url('img/academia1.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
-    box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0.3);
-    
+}
+
+/* Adicione uma sombra de sobreexposição ao body */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Cor e opacidade da sobreposição */
+    z-index: 0;
+}
+
+/* Ajuste para o conteúdo para garantir que esteja acima da sobreposição */
+.content, .navbar, .footer {
+    position: relative;
+    z-index: 1;
 }
 
 /* Estilos para a barra de navegação */
 .navbar {
     background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1;
 }
 
 .nav-link {
@@ -34,9 +49,6 @@ body {
 
 /* Estilos para o conteúdo principal */
 .content {
-    flex: 1;
-    position: relative;
-    z-index: 2;
     padding: 20px;
 }
 
@@ -46,8 +58,6 @@ body {
     color: #ffffff;
     text-align: center;
     padding: 10px 0;
-    position: relative;
-    z-index: 1;
     margin-top: 5em;
 }
 
@@ -74,17 +84,35 @@ body {
     margin: 1em auto;
 }
 
-/* Estilo para a sobreposição semitransparente */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Cor e opacidade da sobreposição */
-    z-index: 0;
+/* Estilos para a seção de formações acadêmicas */
+#formacoes {
+    background: none;
+    padding: 40px 20px;
+    border-radius: 10px;
 }
 
+#formacoes .card {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    color: #ffffff;
+}
+
+#formacoes .card-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#formacoes .card-subtitle {
+    font-size: 1.2em;
+    color: #ff6106;
+}
+
+#formacoes .card-text {
+    font-size: 1em;
+    margin-top: 10px;
+}
 
 /* Estilo para as imagens da galeria */
 .galeria-img {
@@ -92,7 +120,7 @@ body {
     height: 30em;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border: 2px solid #ff6106; /* Adiciona uma borda de 2px na cor #ff6106 */
+    border: 2px solid #ff6106;
 }
 
 /* Estilos para o feed do Instagram */
@@ -102,12 +130,35 @@ body {
     align-items: center;
 }
 
-/* Estilo para o vídeo */
-.contact-info video {
-    width: 60%;
-    height: 20%;
-    align-items: center;
+/* Estilos para a seção de contato */
+#contact {
+    padding: 40px 20px;
+    box-shadow: none; /* Remove a sombra */
 }
+
+#contact h2, #contact p {
+    color: #ffffff;
+}
+
+#contact .form-group label {
+    color: #ffffff;
+}
+
+#contact .form-control {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+}
+
+#contact .btn-primary {
+    background-color: #ff6106;
+    border: none;
+}
+
+#contact .btn-primary:hover {
+    background-color: #e55d04;
+}
+
 
 /* Estilo para a barra de navegação responsiva */
 @media (max-width: 768px) {
@@ -115,23 +166,85 @@ body {
         height: 30px;
     }
     .galeria-img {
-        height: auto; /* Ajuste a altura para se adaptar ao conteúdo */
+        height: auto;
     }
     .contact-info video {
-        height: auto; /* Ajuste a altura para se adaptar ao conteúdo */
+        height: auto;
     }
     .instagram-feed {
-        height: auto; /* Ajuste a altura para se adaptar ao conteúdo */
+        height: auto;
     }
 }
 
-/* Estilos específicos para a seção de contato */
+/* Estilos para a seção de contato */
 #contact {
+    padding: 40px 20px;
+    box-shadow: none; /* Remove a sombra */
+}
+
+#contact h2, #contact p {
+    color: #ffffff;
+}
+
+#contact .form-group label {
+    color: #ffffff;
+}
+
+#contact .form-control {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+}
+
+#contact .btn-primary {
+    background-color: #ff6106;
+    border: none;
+}
+
+#contact .btn-primary:hover {
+    background-color: #e55d04;
+}
+
+/* Estilos para a seção de feedbacks */
+#feedbacks {
     position: relative;
-    padding: 20px;
     z-index: 1;
 }
 
-#contact .overlay {
-    display: none;
+.feedback-card {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    margin: 0 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-card .card-text {
+    font-style: italic;
+}
+
+.feedback-card .card-title {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.feedback-card .card-subtitle {
+    color: #ff6106;
+    margin-top: 5px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #ff6106;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #ffffff;
+    color: #ff6106;
 }
