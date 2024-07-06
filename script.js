@@ -6,8 +6,12 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     var data = document.getElementById('data').value;
     var objetivo = document.getElementById('objetivo').value;
 
-    // Convertendo a data para o formato brasileiro (dd/mm/yyyy)
-    var dataFormatada = new Date(data).toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' });
+    // Convertendo a data para o formato brasileiro sem diminuir um dia
+    var dataObj = new Date(data);
+    var dia = ("0" + dataObj.getUTCDate()).slice(-2);
+    var mes = ("0" + (dataObj.getUTCMonth() + 1)).slice(-2);
+    var ano = dataObj.getUTCFullYear();
+    var dataFormatada = dia + '/' + mes + '/' + ano;
 
     // Cria a mensagem para o WhatsApp
     var mensagem = "Olá César, meu nome é " + nome + ". Gostaria de agendar uma consultoria para o dia " + dataFormatada + " com o objetivo de " + objetivo + ". Obrigado!";
